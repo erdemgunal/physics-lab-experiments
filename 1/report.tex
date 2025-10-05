@@ -1,0 +1,81 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[turkish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\title{DENEY 1: METALLERİN ÖZGÜl ISISININ TAYİNİ}
+\author{Ad Soyad \\ Öğrenci No: \\ Grup No: }
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Deneyin Amacı}
+Metallerin özgül ısısının ölçülmesi.
+
+\section{Teori}
+Bir maddeye herhangi bir iş yapılmaksızın enerji verilirse, maddenin sıcaklığı genellikle artar. 
+
+Özgül ısı formülü:
+\begin{equation}
+Q = mc\Delta T
+\end{equation}
+
+Kalorimetri denklemi:
+\begin{equation}
+m_{Fe} \cdot c_{Fe} \cdot (100 - T_2) = (m_{su} \cdot c_{su} + m_{Cu} \cdot c_{Cu}) \cdot (T_2 - T_1)
+\end{equation}
+
+\section{Deney Düzeneği}
+\begin{itemize}
+    \item Demir parçası
+    \item Kalorimetre
+    \item Termometre
+    \item Karıştırıcı
+    \item Terazi
+\end{itemize}
+
+\section{Ölçümler ve Sonuçlar}
+
+\subsection{Ölçüm Tablosu}
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+Ölçülen Büyüklük & Değer \\
+\hline
+Demir kütlesi ($m_{Fe}$) & \ldots kg \\
+Kalorimetre kabı kütlesi ($m_{Cu}$) & \ldots kg \\
+Su kütlesi ($m_{su}$) & \ldots kg \\
+Başlangıç sıcaklığı ($T_1$) & \ldots °C \\
+Son sıcaklık ($T_2$) & \ldots °C \\
+\hline
+\end{tabular}
+\caption{Deneysel ölçümler}
+\end{table}
+
+\subsection{Hesaplamalar}
+% Buraya Python'dan üretilen sonuçlar eklenecek
+
+\subsection{Grafikler}
+% Buraya Python'dan üretilen grafikler eklenecek
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{graphs/temperature_vs_time.png}
+\caption{Sıcaklık-Zaman grafiği}
+\end{figure}
+
+\section{Hata Analizi}
+% Hata hesaplamaları buraya eklenecek
+
+\section{Sonuçlar ve Değerlendirme}
+% Sonuçlar ve yorumlar buraya yazılacak
+
+\end{document}

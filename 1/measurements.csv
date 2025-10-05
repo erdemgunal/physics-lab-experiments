@@ -1,0 +1,6 @@
+% Raw measurement data for Experiment 1
+% Add your experimental measurements here
+
+% Example data structure:
+Mass_Iron_kg,Mass_Container_kg,Mass_Water_kg,T1_Initial_C,T2_Final_C
+0.150,0.050,0.200,25.0,35.0

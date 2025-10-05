@@ -1,0 +1,9 @@
+% Raw measurement data for Experiment 2
+% Steel ball measurements and falling times
+
+Ball_Number,Diameter_mm,Radius_mm,Time1_s,Time2_s,Time3_s,Average_Time_s,Terminal_Velocity_ms,Viscosity_Coefficient
+1,2.0,1.0,,,,,,,
+2,2.5,1.25,,,,,,,
+3,3.0,1.5,,,,,,,
+4,3.5,1.75,,,,,,,
+5,4.0,2.0,,,,,,,
