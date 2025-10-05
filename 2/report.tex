@@ -29,7 +29,7 @@ The purpose of this experiment is to measure the viscosity coefficient ($\eta$) 
 Stokes' Law states that a friction force acts on a globe moving in a viscous liquid, given by $F_v = 6\pi\eta vr$, where $\eta$ is the viscosity coefficient, $v$ is the velocity of the sphere, and $r$ is the radius. Initially, with no speed, only gravity ($F_g = mg = \frac{4}{3}\pi r^3 \rho_2 g$) and ascending force ($F_a = \rho_1 V g = \frac{4}{3}\pi r^3 \rho_1 g$) act, where $\rho_1$ and $\rho_2$ are liquid and globe densities, and $V$ is the volume of the submerged sphere. The initial acceleration is $a = \frac{\rho_2 - \rho_1}{\rho_2}g$. As speed increases, friction grows, and at terminal speed, there is no acceleration since $F_g - F_a = F_v$, yielding $\eta = \frac{2}{9} \frac{(\rho_2 - \rho_1)g r^2}{v}$.
 
 \section{Apparatus and Method}
-The experiment utilized glycerin, a graduated cylinder, two steel balls with diameters of 0.0047 m and 0.0030 m, a stopwatch, a caliper for diameter measurement, a ruler to measure the distance between measurement points, and a magnet for controlled ball release. The experimental procedure involved filling the graduated cylinder with glycerin, measuring ball diameters with a caliper, marking levels A and B at the 200 ml and 100 ml marks respectively (distance $L = \SI{7.4}{\centi\metre}$ measured with ruler), using the magnet to release each ball from the top of the cylinder, recording the falling time between the 200-100 ml marks, then using the magnet to lift each ball back to the top and repeating this process three times for each ball to calculate the average falling time.
+The experiment utilized glycerin, a graduated cylinder, two steel balls with diameters of 0.47 cm and 0.30 cm, a stopwatch, a caliper for diameter measurement, a ruler to measure the distance between measurement points, and a magnet for controlled ball release. The experimental procedure involved filling the graduated cylinder with glycerin, measuring ball diameters with a caliper, marking levels A and B at the 200 ml and 100 ml marks respectively (distance $L = \SI{7.4}{\centi\metre}$ measured with ruler), using the magnet to release each ball from the top of the cylinder, recording the falling time between the 200-100 ml marks, then using the magnet to lift each ball back to the top and repeating this process three times for each ball to calculate the average falling time.
 
 \section{Measurements and Data}
 Constants:
@@ -37,19 +37,19 @@ Constants:
 	\item Mass density of steel ball: $\rho_2 = \SI{7870}{\kilo\gram\per\metre\cubed}$
 	\item Mass density of glycerin: $\rho_1 = \SI{900}{\kilo\gram\per\metre\cubed}$
 	\item Gravitational acceleration: $g = \SI{9.80}{\metre\per\second\squared}$
-	\item Length of A-B: $L = \SI{0.074}{\metre}$
+	\item Length of A-B: $L = \SI{7.4}{\centi\meter}$
 \end{itemize}
 
 \begin{small}
 	\begin{longtable}{|c|c|c|c|c|c|c|c|c|c|}
 		\caption{Glycerin Viscosity Measurement and Calculation} \label{tab:olcum} \\
 		\hline
-		\textbf{Ball} & \textbf{d} (\si{m}) & \textbf{r} (\si{m}) & \textbf{$r^2$} (\si{m^2}) & \multicolumn{3}{c|}{\textbf{Time, $t$} (\si{s})} & \textbf{$t_{avg}$} (\si{s}) & \textbf{$V$} (\si{m/s}) & \textbf{$\eta$} (\si{Pa.s}) \\
+		\textbf{Ball} & \textbf{d} (\si{cm}) & \textbf{r} (\si{cm}) & \textbf{$r^2$} (\si{m^2}) & \multicolumn{3}{c|}{\textbf{Time, $t$} (\si{s})} & \textbf{$t_{avg}$} (\si{s}) & \textbf{$V$} (\si{m/s}) & \textbf{$\eta$} (\si{Pa.s}) \\
 		\cline{5-7}
 		  &        &         &                       & \textbf{$t_1$} & \textbf{$t_2$} & \textbf{$t_3$} &       &        &        \\
 		\hline
-		1 & 0.0047 & 0.00235 & $5.52 \times 10^{-6}$ & 0.61           & 0.68           & 0.49           & 0.593 & 0.1248 & 0.6717 \\
-		2 & 0.0030 & 0.00150 & $2.25 \times 10^{-6}$ & 1.73           & 1.72           & 1.64           & 1.70  & 0.0435 & 0.7851 \\
+		1 & 0.47 & 0.235 & $5.52 \times 10^{-6}$ & 0.61           & 0.68           & 0.49           & 0.593 & 0.1248 & 0.6717 \\
+		2 & 0.30 & 0.150 & $2.25 \times 10^{-6}$ & 1.73           & 1.72           & 1.64           & 1.70  & 0.0435 & 0.7851 \\
 		\hline
 		\multicolumn{9}{|r|}{\textbf{Mean $\eta_{avg}$}} & 0.7284 \\
 		\hline
@@ -78,9 +78,9 @@ The viscosity coefficient based on the slope:
 \end{figure}
 
 \section{Results and Discussion}
-The viscosity coefficient of glycerin was determined through the application of Stokes' Law using falling metal spheres. Two calculation methods yielded viscosity values of $\eta_{\text{avg}} = \SI{0.7284}{\pascal\second}$ (direct calculation) and $\eta_{\text{graph}} = \SI{0.611}{\pascal\second}$ (graphical analysis). The experimental results confirmed the expected theoretical behavior, demonstrating a clear relationship between sphere radius and terminal velocity. The measurements were conducted in the lower section of the cylinder to ensure accurate terminal velocity data collection.
+The viscosity coefficient of glycerin was determined through the application of Stokes' Law using falling metal spheres. Two calculation methods yielded viscosity values of $\eta_{\text{avg}} = \SI{0.7284}{\pascal\second}$ (direct calculation) and $\eta_{\text{graph}} = \SI{0.611}{\pascal\second}$ (graphical analysis). The experimental results validated the expected theoretical behavior, demonstrating a distinct relationship between sphere radius and terminal velocity. The measurements were conducted in the lower section of the cylinder to ensure accurate terminal velocity data collection.
 
-The main factor contributing to deviations between measured and theoretical values was glycerin purity, which could not be guaranteed and likely affected the viscosity measurements due to water contamination. The observed differences between experimental results and literature values for pure glycerin can be primarily attributed to this impurity factor and the limited number of data points available for analysis.
+The main reason for differences between our measured values and theoretical values was that the glycerin was not pure. We could not guarantee the purity of the glycerin, which affected our viscosity measurements. The glycerin may have become impure because it was left open for a long time and absorbed moisture from the humid air in the room. The differences between our experimental results and literature values for pure glycerin are mainly due to this impurity problem and the small number of data points we collected.
 
 Sources of error:
 \begin{enumerate}
