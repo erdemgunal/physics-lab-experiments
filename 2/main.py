@@ -1,15 +1,13 @@
 import matplotlib.pyplot as plt
+import os
 import numpy as np
 from scipy import stats
 
-# Data
 V = [0.1248, 0.0435] # m/s (velocity)
 R_squared = [0.0552, 0.0225] # cm^2 (radius squared)
 
-# Convert R_squared values to m^2
 R_squared_m2 = [r/10000 for r in R_squared]  # cm^2 -> m^2
 
-# Linear regression
 slope, intercept, r_value, p_value, std_err = stats.linregress(R_squared_m2, V)
 
 print(f"V vs r² Graph Analysis:")
@@ -17,54 +15,51 @@ print(f"Slope: {slope:.4f} m/s per m²")
 print(f"Y-intercept: {intercept:.4f} m/s")
 print(f"R² value: {r_value**2:.4f}")
 
-# LaTeX compatible font settings - maximized for report visibility
 plt.rcParams.update({
     'font.family': 'serif',
-    'font.serif': ['Times New Roman', 'DejaVu Serif', 'serif'],  # Fallback fonts
-    'text.usetex': False,  # Keep False for compatibility
-    'font.size': 18,       # Much larger base font size
-    'axes.labelsize': 22,  # Much larger axis labels
-    'axes.titlesize': 24,  # Much larger title
-    'xtick.labelsize': 18, # Much larger tick labels
-    'ytick.labelsize': 18, # Much larger tick labels
-    'legend.fontsize': 18, # Much larger legend
-    'figure.titlesize': 24,
-    'mathtext.fontset': 'stix'  # Better math font rendering
+    'font.serif': ['Times New Roman', 'DejaVu Serif', 'serif'],
+    'text.usetex': False,       # mathtext ile LaTeX uyumu
+    'font.size': 22,            # genel font, legend ve tick'ler için de baz alınabilir
+    'axes.labelsize': 26,       # X ve Y label
+    'axes.titlesize': 30,       # grafik başlığı
+    'xtick.labelsize': 22,      # X tick
+    'ytick.labelsize': 22,      # Y tick
+    'legend.fontsize': 22,      # legend
+    'figure.titlesize': 30,
+    'mathtext.fontset': 'cm'    # LaTeX tarzı matematik fontu
 })
 
-# Create graph with maximum visibility for reports
-plt.figure(figsize=(14, 10))  # Even larger figure for maximum readability
+
+plt.figure(figsize=(14, 10))
 plt.scatter(R_squared_m2, V, color='red', s=200, label='Experimental data', zorder=5, 
            edgecolors='black', linewidth=2)  # Larger data points
 
-# Linear fit line
 x_fit = np.linspace(min(R_squared_m2), max(R_squared_m2), 100)
 y_fit = slope * x_fit + intercept
 plt.plot(x_fit, y_fit, 'b-', label=f'Linear fit: V = {slope:.3f}r² + {intercept:.4f}', linewidth=4)
 
-plt.xlabel(r'$r^2$ (m$^2$)', fontweight='bold')  # Bold axis labels
-plt.ylabel(r'$V$ (m/s)', fontweight='bold')      # Bold axis labels
-plt.title('Velocity vs Radius Squared', fontweight='bold', pad=25)  # Bold title with more padding
-plt.grid(True, alpha=0.5, linestyle='--', linewidth=1.0)  # Even more visible grid
+plt.xlabel(r'$r^2$ (m$^2$)', fontweight='bold')
+plt.ylabel(r'$V$ (m/s)', fontweight='bold')
+plt.title('Velocity vs Radius Squared', fontweight='bold', pad=25)
+plt.grid(True, alpha=0.5, linestyle='--', linewidth=1.0)
 plt.legend(frameon=True, fancybox=True, shadow=True, loc='upper left', 
-          framealpha=0.95, edgecolor='black', facecolor='white')  # Enhanced legend
+          framealpha=0.95, edgecolor='black', facecolor='white')
 
-# Add more space around the plot
 plt.subplots_adjust(left=0.12, bottom=0.12, right=0.95, top=0.90)
 
-# Make the graph more professional and LaTeX-compatible
 plt.tight_layout()
 
-# Save as PDF for LaTeX/Overleaf
-plt.savefig('velocity_vs_radius_squared.pdf', 
+save_path = 'graphs'
+os.makedirs(save_path, exist_ok=True)
+
+plt.savefig(f'{save_path}/velocity_vs_radius_squared.pdf', 
             format='pdf', 
             dpi=300, 
             bbox_inches='tight',
             facecolor='white',
             edgecolor='none')
 
-# Save as high-quality PNG as alternative
-plt.savefig('velocity_vs_radius_squared.png', 
+plt.savefig(f'{save_path}/velocity_vs_radius_squared.png', 
             format='png', 
             dpi=300, 
             bbox_inches='tight',
@@ -77,21 +72,15 @@ print(f"\nGraph saved as:")
 print(f"- velocity_vs_radius_squared.pdf (recommended for LaTeX)")
 print(f"- velocity_vs_radius_squared.png (alternative format)")
 
-# Parameters needed for viscosity calculation
 print("\n" + "="*50)
 print("VISCOSITY CALCULATION")
 print("="*50)
 
-# Formula: η = (2 * g * (ρ2 - ρ1)) / (9 * m)
-# Where m = slope (obtained from the graph)
+g = 9.81
 
-g = 9.81  # gravitational acceleration (m/s²)
+rho_2 = 7800
+rho_1 = 900
 
-# Actual density values used in experiment
-rho_2 = 7800  # kg/m³ (steel sphere density)
-rho_1 = 900   # kg/m³ (glycerin density)
-
-# Viscosity calculation
 eta_graph = (2 * g * (rho_2 - rho_1)) / (9 * slope)
 
 print(f"Parameters used:")
