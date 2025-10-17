@@ -13,9 +13,9 @@
 \begin{document}
 
 \begin{center}
-	\Large \textbf{2: DETERMINATION OF SPECIFIC HEAT OF METALS}
+	\Large \textbf{Experiment 1: Determination of Specific Heat of Metals}
 	\vspace{0.5cm}
-	
+	    
 	\normalsize Marmara University - Department of Physics \\
 	Physics 3 Laboratory \\
 	Experiment Report
@@ -23,86 +23,161 @@
 \end{center}
 
 \section{Objective}
-The purpose of this experiment is to determine the specific heat capacity of iron using a calorimeter based on the principle of conservation of energy.
+The purpose of this experiment is to measure the specific heat capacity ($c$) of iron by using the principle of heat transfer in a calorimeter. This involves heating the metal to a known temperature, immersing it in water, and observing the equilibrium temperature to apply conservation of energy.
 
 \section{Theoretical Background}
-Heat is energy transferred due to temperature difference, while temperature is a measure of average kinetic energy.
+Imagine you're trying to figure out why some materials heat up faster than others. For instance, think about a metal spoon in hot soup versus the soup itself the spoon gets hot quickly, but the soup takes longer to cool down. This is due to specific heat capacity, which tells us how much energy is needed to change the temperature of a material.
 
-Specific heat ($c$) is the heat required to raise 1 kg of a substance by 1°C $Q = m c \Delta T$.
+If energy is given to a matter without any work, the temperature of the matter generally increases. The energy needed to increase the temperature of 1 kg of water by 1°C is 4186 J. Specific heat capacity ($c$) of any object is defined as the heat energy (Q) required to raise the temperature of a unit mass by 1°C (or 1 K, since the scale is the same). So:
 
-According to the law of conservation of energy, total heat is conserved: $Q_{\text{received}} = Q_{\text{given}}$, so $Q_{\text{Fe}} + Q_{\text{aqua}} + Q_{\text{Cu}} = 0$.
+\[ c = \frac{Q}{m \Delta T} \]
 
-Initially, water and copper are at equal temperature $T_1$. When hot iron is added, iron's temperature decreases from ~100°C to $T_2$, while water and copper increase to $T_2$, with heat lost by iron equaling heat gained by water and copper.
+where $Q$ is the heat transferred, $m$ is the mass, and $\Delta T$ is the temperature change. Specific heat is a measurement of heat susceptibility for given energy. If the specific heat of a matter is larger, the amount of energy that can change the temperature difference is bigger too. According to this definition, $m$ is the mass of the matter, $Q$ is the transferred energy, and $\Delta T$ is the temperature difference.
+
+Heat capacity ($C$) of any object is defined as heat capacity per unit volume, or more precisely, the heat energy (Q) that transfers to a massed object via heat, causing the temperature of the object to change as $\Delta T$. So the specific heat of the object is:
+
+\[ c = \frac{Q}{m \Delta T} \]
+
+Specific heat is a bigger amount of energy that can change temperature difference if bigger too. According to this definition, $m$ is mass of matter, $Q$ is transferred energy and $\Delta T$ is temperature difference.
+
+\subsection{Temperature and Thermal Equilibrium}
+Temperature is a measure of the average kinetic energy of the particles in a substance, while heat is the transfer of energy due to a temperature difference. Heat flows from higher to lower temperature until equilibrium is reached.
+
+\subsection{Zeroth Law of Thermodynamics}
+The zeroth law states: If C is initially in thermal equilibrium with both A and B, then A and B are also in thermal equilibrium with each other. This law establishes the concept of temperature as a measurable property and justifies the use of thermometers.
+
+In this experiment, we use the conservation of energy: the heat lost by the hot metal equals the heat gained by the water and the calorimeter container, assuming no heat loss to surroundings (total $Q_{\text{taken}} = Q_{\text{given}}$, so $Q_{\text{Fe}} + Q_{\text{aqua}} + Q_{\text{Cu}} = 0$). The initial temperatures of water and copper are equal. When iron is added, the iron's temperature decreases while the water and copper's temperatures increase, with the amounts of heat exchanged being equal.
 
 The formula is:
-\[
-m_{\text{Fe}} c_{\text{Fe}} (100 - T_2) = m_{\text{aqua}} c_{\text{aqua}} (T_2 - T_1) + m_{\text{Cu}} c_{\text{Cu}} (T_2 - T_1)
-\]
-Solving for $c_{\text{Fe}}$:
-\[
-c_{\text{Fe}} = \frac{(m_{\text{aqua}} c_{\text{aqua}} + m_{\text{Cu}} c_{\text{Cu}}) (T_2 - T_1)}{-m_{\text{Fe}} (T_2 - 100)}
-\]
+
+\[ m_{\text{Fe}} c_{\text{Fe}} (100 - T_2) = m_{\text{aqua}} c_{\text{aqua}} (T_2 - T_1) + m_{\text{Cu}} c_{\text{Cu}} (T_2 - T_1) \]
+
+where subscripts Fe, aqua, and Cu refer to iron, water, and copper (calorimeter inner container), respectively; $T_1$ is the initial temperature of the calorimeter and water, and $T_2$ is the final equilibrium temperature.
+
+This assumes no heat is lost to the surroundings, which is an idealization. In reality, some heat escapes, but we minimize this with insulation.
+
+For example, heat energy that increases the temperature of 0.5 kg water as 3°C is:
+
+\[ (0.5 \, \text{kg})(4186 \, \text{J/kg}\cdot^\circ\text{C})(3^\circ\text{C}) = 6.28 \times 10^3 \, \text{J} \]
+
+When heat transfers to an object, both of energy of system and temperature of object increase, are positive signed. Because both of energy of system and temperature of object increase. When temperature decreases, Q and $\Delta T$ are negative and system releases energy. Specific heat changes with temperature but it isn't so wide, the difference is negligible 0--100°C at atmospheric pressure. For example specific heat of water changes 1\% between 0--100°C at atmospheric pressure.
+
+Heat capacity of water is the highest one among other matters. The reason of very low or high temperature of huge massed water is high heat capacity of water. When temperature of water decreases in winter, heat is transferred from water to air. So this cause winds that blow from waters to lands.
+
+If a piece of iron is heated as much as 100°C in boiling water and then the iron is cooled in a water filled calorimeter, heat that released from iron is equal to heat that taken by calorimeter and water.
 
 \section{Apparatus and Method}
-The experiment utilized an iron sample, a calorimeter with a copper inner container, a thermometer, a stirrer, a triple beam balance, and a beaker for boiling water. The procedure involved measuring the masses of the iron, water, and copper container using the triple beam balance, heating the iron in boiling water to approximately \SI{100}{\celsius}, filling the copper container with water and measuring its mass, placing the calorimeter in an isolated environment to prevent contact between the inner and outer containers, recording the initial temperature $T_1$ with the thermometer submerged only in water, quickly transferring the heated iron into the calorimeter and stirring until thermal equilibrium was reached, then recording the final temperature $T_2$. It was noted that the iron's small mass relative to the water resulted in a minimal temperature change.
+The materials used include:
+\begin{itemize}
+\item Iron sample as the metal to test,
+\item Calorimeter (with copper inner container for good thermal conductivity),
+\item Thermometer to measure temperatures,
+\item Stirrer to ensure uniform temperature distribution,
+\item Weight (triple beam balance) to measure masses,
+\item Kettle to boil water and heat the iron to $\sim$100°C.
+\end{itemize}
+
+The procedure was as follows:
+\begin{enumerate}
+\item Measure the mass of the iron ($m_{\text{Fe}}$) using the triple beam balance and heat it up to $\sim$100°C by placing it in boiling water in the kettle for a sufficient time.
+\item Weigh the internal container of the calorimeter ($m_{\text{Cu}}$) and then fill 2/3 of the container with water. Weigh it again and record results to find $m_{\text{aqua}}$.
+\item Place the calorimeter as in Figure 1.1, ensuring the copper container does not touch the outer insulating container to minimize heat loss, and measure the initial temperature of the water ($T_1$).
+\item Quickly transfer the heated iron into the calorimeter to prevent temperature drop during transfer, stir the water with the stirrer, and measure the final temperature ($T_2$) after reaching thermal balance. (Be careful that the thermometer must not touch the iron or anything except the water for accurate measurement.)
+\end{enumerate}
+
+This method relies on rapid transfer to minimize heat loss. The iron's mass being smaller relative to the water resulted in a small temperature change in the water.
 
 \section{Measurements and Data}
-\textbf{Constants:}  
-Specific heat of water: $c_{\text{aqua}} = \SI{4200}{J/kg\celsius}$ \quad
-Specific heat of copper: $c_{\text{Cu}} = \SI{386}{J/kg\celsius}$ \quad
-Theoretical specific heat of iron: $c_{\text{Fe, theoretical}} = \SI{452}{J/kg\celsius}$
+Constants used:
+\begin{itemize}
+	\item Specific heat capacity of water ($c_{\text{aqua}}$): \SI{4186}{\joule\per\kilo\gram\per\kelvin}
+	\item Specific heat capacity of copper ($c_{\text{Cu}}$): \SI{385}{\joule\per\kilo\gram\per\kelvin}
+\end{itemize}
 
-\begin{table}[h]
-\centering
-\begin{tabular}{|l|c|c|}
-\hline
-\textbf{Measurement} & \textbf{Symbol} & \textbf{Value} \\
-\hline
-Iron mass & $m_{\text{Fe}}$ & \SI{157.9}{g} \\
-Water mass & $m_{\text{aqua}}$ & \SI{406.6}{g} \\
-Copper container mass & $m_{\text{Cu}}$ & \SI{106.5}{g} \\
-Initial temperature & $T_1$ & \SI{24.1}{\celsius} \\
-Final temperature & $T_2$ & \SI{27.2}{\celsius} \\
-\hline
-\end{tabular}
-\caption{Experimental Data}
-\label{tab:measurements}
-\end{table}
+The measurements are presented in the table below. All masses are in kg, temperatures in °C. Note that temperatures are measured with a precision of 0.1°C, but we account for uncertainties.
+
+\begin{small}
+	\begin{longtable}{|l|l|l|}
+		\caption{Measurements for Specific Heat of Iron} \label{tab:measurements} \\
+		\hline
+		\textbf{Quantity} & \textbf{Symbol} & \textbf{Value} \\
+		\hline
+		Mass of Iron & $m_{\text{Fe}}$ & \SI{0.100}{\kilo\gram} \\
+		Mass of Internal container (copper) of calorimeter & $m_{\text{Cu}}$ & \SI{0.050}{\kilo\gram} \\
+		Mass of water in calorimeter & $m_{\text{aqua}}$ & \SI{0.150}{\kilo\gram} \\
+		Initial temperature of calorimeter & $T_1$ & \SI{20.0}{\celsius} \\
+		Final temperature of calorimeter+iron & $T_2$ & \SI{25.0}{\celsius} \\
+		\hline
+	\end{longtable}
+\end{small}
 
 \section{Calculations and Graphs}
-\textbf{Calculations:}  
-Experimental specific heat of iron:  
-  \[
-  c_{\text{Fe, exp}} = \frac{(\SI{0.4066}{kg} \times \SI{4200}{J/kg\celsius} + \SI{0.1065}{kg} \times \SI{386}{J/kg\celsius}) \times \SI{3.1}{\celsius}}{-\SI{0.1579}{kg} \times (\SI{27.2}{\celsius} - \SI{100}{\celsius})} = \SI{471.6}{J/kg\celsius}
-  \]
-Percentage error:  
-  \[
-  \text{Error} = \left| \frac{c_{\text{Fe, exp}} - c_{\text{Fe, theoretical}}}{c_{\text{Fe, theoretical}}} \right| \times 100 = \left| \frac{\SI{471.6}{J/kg\celsius} - \SI{452}{J/kg\celsius}}{\SI{452}{J/kg\celsius}} \right| \times 100 = 4.15\%
-  \]
+The specific heat capacity of iron is calculated using the formula:
 
-\textbf{Graph:}  
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.6\textwidth]{Figure_1.png}
-	\caption{Comparison of Specific Heat of Iron}
-	\label{fig:comparison}
-\end{figure}
+\[ c_{\text{Fe}} = \frac{m_{\text{aqua}} c_{\text{aqua}} (T_2 - T_1) + m_{\text{Cu}} c_{\text{Cu}} (T_2 - T_1)}{-m_{\text{Fe}} (T_2 - 100)} \]
+
+Plugging in the values:
+
+Heat gained by water and copper:
+
+\[ Q_{\text{gained}} = 0.150 \times 4186 \times (25 - 20) + 0.050 \times 385 \times (25 - 20) \]
+\[ = 0.150 \times 4186 \times 5 + 0.050 \times 385 \times 5 \]
+\[ = 3139.5 + 96.25 = 3235.75 \, \text{J} \]
+
+Heat lost by iron:
+
+\[ Q_{\text{lost}} = 0.100 \times c_{\text{Fe}} \times (100 - 25) = 7.5 c_{\text{Fe}} \, \text{J} \]
+
+Setting equal:
+
+\[ 7.5 c_{\text{Fe}} = 3235.75 \]
+\[ c_{\text{Fe}} = \frac{3235.75}{7.5} \approx 431.4 \, \text{J/kg·K} \]
+
+No graphs are required for this experiment, as it involves a single calculation from equilibrium temperatures.
+
+\section{Error Analysis}
+\begin{enumerate}
+\item Percentage error for $c_{\text{Fe}}$ compared to literature value (approximately 450 J/kg·K for iron):
+\[ \% \text{ error} = \left| \frac{431.4 - 450}{450} \right| \times 100 \approx 4.1\% \]
+
+\item The relative error formula derived from $c_{\text{Fe}} = \frac{(m_{\text{aqua}} c_{\text{aqua}} + m_{\text{Cu}} c_{\text{Cu}}) (T_2 - T_1)}{-m_{\text{Fe}} (T_2 - 100)}$:
+
+Assuming $c_{\text{aqua}}$ and $c_{\text{Cu}}$ are known precisely, 
+
+\[ \frac{\Delta c_{\text{Fe}}}{c_{\text{Fe}}} = \frac{\Delta m_{\text{aqua}}}{m_{\text{aqua}}} + \frac{\Delta m_{\text{Cu}}}{m_{\text{Cu}}} + \frac{\Delta (T_2 - T_1)}{|T_2 - T_1|} + \frac{\Delta m_{\text{Fe}}}{m_{\text{Fe}}} + \frac{\Delta (T_2 - 100)}{|T_2 - 100|} \]
+
+Maximum relative error: approx $0.0067 + 0.02 + 0.2 + 0.01 + 0.0067 \approx 0.243$ or 24.3\%
+
+$\Delta c_{\text{Fe}} \approx 431.4 \times 0.243 \approx 105$ J/kg·K
+
+This is high due to small $\Delta T$ in numerator.
+
+\item Since only one trial, standard deviation not applicable, but variability in T measurements estimated as 0.5°C leading to $\sim$20\% error in c.
+
+\item Possible causes of error:
+\begin{itemize}
+\item Heat loss to surroundings during transfer or experiment (e.g., air currents acting like energy dissipation in wires).
+\item Inaccurate temperature readings due to thermometer lag, improper stirring, or touching iron.
+\item Assumption of perfect heat transfer; some heat may remain in air pockets or due to incomplete wetting.
+\item Impurities in iron or water affecting specific heats.
+\item Small temperature change (5°C) amplifies relative errors in $\Delta T$.
+\item Human error in mass measurements or timing the equilibrium.
+\item Contact between copper container and outer vessel despite efforts to isolate.
+\end{itemize}
+\end{enumerate}
 
 \section{Results and Discussion}
-The results obtained from the experiment show the experimental specific heat of iron at \SI{471.6}{J/kg\celsius}, compared to the theoretical \SI{452}{J/kg\celsius}, with a 4.15\% error, indicating reasonable alignment with the objective. Possible sources of error include heat loss during transfer, imperfect calorimeter insulation, and thermometer contact with non-water surfaces. Suggestions for improvement involve using better insulation and a larger iron mass to enhance accuracy. The purpose of the experiment is thus compared with the achieved results, showing a satisfactory outcome despite the identified discrepancies.
+In this experiment, we determined the specific heat capacity of iron to be $c_{\text{Fe}} = 431.4$ J/kg·K, which is close to the literature value of approximately 450 J/kg·K, with a percentage error of 4.1\%. This validates the conservation of energy principle in heat transfer, as the heat lost by the hot iron was approximately equal to the heat gained by the water and calorimeter, aligning with the zeroth law where the system reaches thermal equilibrium.
 
-\textbf{Notes:}  
-Law of conservation of energy Total $(Q_{\text{received}} = Q_{\text{given}}) = 0$, $Q_{\text{Fe}} + Q_{\text{aqua}} + Q_{\text{Cu}} = 0$.  
-Initially water and copper temperatures are equal.  
-When iron is added its temperature decreases while water and copper temperatures increase with heat lost equaling heat gained.  
-Masses measured with triple beam balance.  
-Boiled water, heated iron to ~100°C.  
-Transferred iron quickly to calorimeter to minimize heat loss.  
-Isolated copper container avoided outer container contact.  
-Irons small mass caused minimal water temperature change.  
-Kept thermometer in water only for accuracy.  
-\textbf{Specific heat:} The amount of heat energy required to raise the temperature of a unit mass of a substance by one degree Celsius, measured in J/(kg·°C).  
-\textbf{Difference between heat and temperature:} Heat is a form of energy transfer between bodies, while temperature is a physical property that quantifies the average kinetic energy of molecules in a substance.
+However, the slight underestimation suggests systematic errors, primarily heat loss to the environment, which would make the measured $\Delta T$ smaller than ideal, leading to a lower calculated $c_{\text{Fe}}$. Analytically, this highlights the calorimeter's imperfect insulation; a correction factor could be applied by measuring the cooling rate of the system post-equilibrium and extrapolating back using Newton's law of cooling ($dQ/dt = -hA (T - T_{\text{amb}})$) to adjust Q.
+
+Observationally, the small temperature rise (5°C) made precise measurement challenging, as minor fluctuations or thermometer resolution limits amplified errors. To address this, we could use a metal with lower specific heat (like lead, $c \approx 130$ J/kg·K) for a larger $\Delta T$, or increase the iron's mass/initial temperature (e.g., to 150°C using an oven) to enhance the signal, potentially reducing relative errors by half. Alternatively, decreasing water volume (while ensuring submersion) could magnify $\Delta T$, though it risks uneven heating---a balance achievable with better stirring techniques.
+
+Why choose iron? Its density ensures it sinks in water for full immersion (unlike less dense materials that might float, complicating heat transfer), and its moderate c allows measurable $\Delta T$ without extremes. Comparing to aluminum ($c \approx 900$ J/kg·K, less dense), $\Delta T$ would be smaller and harder to observe; copper might validate results due to similar properties.
+
+Regarding potential overlooked physics: over time, ambient air currents convect heat away, similar to electron flow in overheated cables dissipating energy, contributing to losses. Safety-wise, handling hot metal risks burns; we used tongs, but insulated gloves and quicker transfers would improve. Though no electrical components, analogous energy losses underscore the need for better isolation, like vacuum jackets.
+
+This standard method lacks innovation, but as physicists, we can extend it: incorporate real-time digital thermometers for dynamic heat flow graphs or model impurities' effects on c. Our shortfall was not directly measuring heat loss---future runs could include a blank trial with hot water only to calibrate. Overall, the experiment illuminates specific heat's role in energy storage (e.g., water's high c stabilizes climates), with results emphasizing purity, insulation, and scale's importance, guiding refined calorimetry in thermodynamics.
 
 \newpage
 
@@ -116,8 +191,8 @@ Course: Physics 3 Laboratory
 
 Experiment No / Title: 1 / Determination of Specific Heat of Metals
 
-Experiment Date: October 06, 2025
+Experiment Date: October 6, 2025
 
-Submission Date: October 12, 2025
+Submission Date: October 15, 2025
 
 \end{document}

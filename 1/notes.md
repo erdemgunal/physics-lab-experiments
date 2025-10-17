@@ -23,3 +23,8 @@ daha iyi olcum alabilmek icin termometreyi bir su haricinde bir yere temas ettir
 oz isi nedir?
 
 isi ve sicaklik arasindaki fark (isi: enerji, sicaklik: ölçü)?
+
+TEMPERATURE AND THERMAL EQUILIBRIUM
+
+ZEROTH LAW OF THERMODYNAMICS If C is initially in thermal equilibrium
+with both A and B, then A and B are also in thermal equilibrium with each other.

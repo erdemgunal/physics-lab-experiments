@@ -23,7 +23,7 @@ values = [c_Fe_experimental, c_Fe_theoretical]
 bars = plt.bar(labels, values, color=['#FF6B6B', '#4ECDC4'])
 
 # # Set y-axis to a narrower range to highlight the difference
-# plt.ylim(450, 475)
+plt.ylim(450, 475)
 
 # Add horizontal grid lines to show y values clearly
 plt.grid(True, axis='y', linestyle='-', alpha=0.3)
