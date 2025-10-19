@@ -7,7 +7,7 @@ T_1 = 24.1  # Initial temperature of calorimeter, °C
 T_2 = 27.2  # Final temperature of calorimeter + iron, °C
 c_aqua = 4200  # Heat capacity of water, J/kg°C
 c_Cu = 386  # Heat capacity of copper, J/kg°C
-c_Fe_theoretical = 452  # Theoretical specific heat of iron, J/kg°C
+c_Fe_theoretical = 450  # Theoretical specific heat of iron, J/kg°C
 
 # Calculate experimental specific heat of iron
 if T_2 != T_1 and m_Fe != 0:
@@ -23,7 +23,7 @@ values = [c_Fe_experimental, c_Fe_theoretical]
 bars = plt.bar(labels, values, color=['#FF6B6B', '#4ECDC4'])
 
 # # Set y-axis to a narrower range to highlight the difference
-plt.ylim(450, 475)
+# plt.ylim(450, 475)
 
 # Add horizontal grid lines to show y values clearly
 plt.grid(True, axis='y', linestyle='-', alpha=0.3)
