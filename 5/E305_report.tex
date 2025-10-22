@@ -39,7 +39,8 @@ When a light ray passes from a less optically dense medium (air, $n_1$) into a m
 The \textbf{refractive index ($n$)} is a measure of a medium's optical density, defined as the ratio of the speed of light in a vacuum ($c$) to its speed in the medium ($v$): $n = c/v$. Light always travels slower in a medium with a higher $n$.
 \begin{itemize}
     \item When light moves from a lower optical density ($n_1$) to a higher optical density ($n_2$), its speed decreases ($v_2 < v_1$), and the ray bends \textbf{towards the Normal} ($i_2 < i_1$).
-    \item The angle of refraction ($i_2$) is determined by the fundamental \textbf{Snell's Law}: $n_1 \sin i_1 = n_2 \sin i_2$.
+    \item The angle of refraction ($i_2$) is determined by the fundamental \textbf{Snell's Law}: 
+    $$n_1 \sin i_1 = n_2 \sin i_2$$
 \end{itemize}
 
 \subsection{Plane Surface Geometry}
@@ -65,12 +66,12 @@ The experimental data gathered for the lateral shift ($d_{exp}$) and the corresp
 \begin{longtable}{|c|c|c|c|c|c|c|}
 	\caption{Experimental and Theoretical Data for Lateral Shift} \label{tab:shift_data} \\
 	\hline
-    \textbf{N} & \textbf{$i_1$ (°)} & \textbf{$i_2$ (theo) (°)} & \textbf{$i_3$ (theo) (°)} & \textbf{$i_4$ (theo) (°)} & \textbf{$d_{exp}$ (\SI{}{cm})} & \textbf{$d_{theo}$ (\SI{}{cm})} \\
+    \textbf{N} & \textbf{$i_1$ (\si{\degree})} & \textbf{$i_2$ (theo) (\si{\degree})} & \textbf{$i_3$ (theo) (\si{\degree})} & \textbf{$i_4$ (theo) (\si{\degree})} & \textbf{$d_{exp}$ (\si{cm})} & \textbf{$d_{theo}$ (\si{cm})} \\
 	\hline
 	\endfirsthead
     \caption{Table \ref{tab:shift_data} continued} \\
     \hline
-    \textbf{N} & \textbf{$i_1$ (°)} & \textbf{$i_2$ (theo) (°)} & \textbf{$i_3$ (theo) (°)} & \textbf{$i_4$ (theo) (°)} & \textbf{$d_{exp}$ (\SI{}{cm})} & \textbf{$d_{theo}$ (\SI{}{cm})} \\
+    \textbf{N} & \textbf{$i_1$ (\si{\degree})} & \textbf{$i_2$ (theo) (\si{\degree})} & \textbf{$i_3$ (theo) (\si{\degree})} & \textbf{$i_4$ (theo) (\si{\degree})} & \textbf{$d_{exp}$ (\si{cm})} & \textbf{$d_{theo}$ (\si{cm})} \\
     \hline
 	\endhead
 	1 & 20 & 13.2834 & 13.2834 & 20 & 0.70 & 0.7691 \\
@@ -109,7 +110,7 @@ The calculated absolute errors ($\Delta M$) are small ($\sim 0.008$), confirming
 
 The experimental results demonstrate reasonable agreement with theoretical predictions, with percentage errors ranging from $4.50\%$ to $13.21\%$. The error propagation analysis indicates that instrumental uncertainties in length measurements ($\Delta L$, $\Delta d$) contribute minimally to the overall uncertainty ($\Delta M \approx 0.008$), suggesting that systematic errors dominate the experimental deviation.
 
-Three principal sources of systematic error were identified. First, the finite beam width effect introduces ambiguity in determining the ray center position, as the theoretical model assumes an idealized geometric ray while the experimental beam possesses measurable spatial extent. This effect becomes increasingly significant as the lateral displacement increases with incident angle. Second, surface imperfections and potential non-parallelism of the acrylic block faces violate the fundamental geometric assumption underlying the theoretical derivation. Even small angular deviations ($<0.5°$) can produce measurable discrepancies in the emergent ray direction, directly affecting $d_{exp}$. Third, chromatic dispersion from the polychromatic light source results in wavelength-dependent refractive indices, broadening the emergent beam and complicating precise measurement of the lateral shift.
+Three principal sources of systematic error were identified. First, the finite beam width effect introduces ambiguity in determining the ray center position, as the theoretical model assumes an idealized geometric ray while the experimental beam possesses measurable spatial extent. This effect becomes increasingly significant as the lateral displacement increases with incident angle. Second, surface imperfections and potential non-parallelism of the acrylic block faces violate the fundamental geometric assumption underlying the theoretical derivation. Even small angular deviations ($<\SI{0.5}{\degree}$) can produce measurable discrepancies in the emergent ray direction, directly affecting $d_{exp}$. Third, chromatic dispersion from the polychromatic light source results in wavelength-dependent refractive indices, broadening the emergent beam and complicating precise measurement of the lateral shift.
 
 The anomalous error at $i_1 = \SI{40}{\degree}$ ($PE = 13.21\%$) likely arises from compounding of these systematic effects rather than random measurement uncertainty. At intermediate angles, the sensitivity of $d$ to variations in $i_2$ reaches a local maximum, amplifying the impact of beam width and surface irregularities on the measured displacement.
 
