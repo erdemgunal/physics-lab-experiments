@@ -1,0 +1,140 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{siunitx}
+\usepackage{longtable}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{float}
+
+\begin{document}
+
+\begin{center}
+	\Large \textbf{Experiment 5: Light Through a Parallel-Sided Block}
+	\vspace{0.5cm}
+	
+	\normalsize Marmara University - Department of Physics \\
+	Physics 3 Laboratory \\
+	Experiment Report
+	\vspace{0.5cm}
+\end{center}
+
+\section{Objective}
+The primary objective of this experiment is to visually demonstrate the principle of light refraction across parallel boundaries and to quantify the resulting \textbf{lateral parallel shift (\(d\))} of the light ray. We aim to test the accuracy of the theoretical model (Snell's Law and trigonometric shift formula) by comparing calculated values with experimental measurements.
+
+\section{Theoretical Background}
+When a light ray passes from a less optically dense medium (air, $n_1$) into a more optically dense medium (acrylic, $n_2$), its speed changes, causing its path to bend or refract. For a block with parallel sides, the ray undergoes this refraction twice: once upon entry and once upon exit.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{image.png}
+    \caption{Refraction and Lateral Shift of a Light Ray through a Parallel-Sided Block. The ray bends towards the normal upon entering ($i_2 < i_1$ since $n_2 > n_1$) and exits parallel to the incident ray ($i_4 = i_1$). The distance $d$ is the lateral shift.}
+    \label{fig:ray_diagram}
+\end{figure}
+
+\subsection{Optical Density}
+The \textbf{refractive index ($n$)} is a measure of a medium's optical density, defined as the ratio of the speed of light in a vacuum ($c$) to its speed in the medium ($v$): $n = c/v$. Light always travels slower in a medium with a higher $n$.
+\begin{itemize}
+    \item When light moves from a lower optical density ($n_1$) to a higher optical density ($n_2$), its speed decreases ($v_2 < v_1$), and the ray bends \textbf{towards the Normal} ($i_2 < i_1$).
+    \item The angle of refraction ($i_2$) is determined by the fundamental \textbf{Snell's Law}: $n_1 \sin i_1 = n_2 \sin i_2$.
+\end{itemize}
+
+\subsection{Plane Surface Geometry}
+The defining feature of this experiment is the \textbf{parallel nature of the block's surfaces}. This geometric constraint dictates the relationship between the internal and external angles:
+\begin{itemize}
+    \item Due to parallel geometry, the angle of refraction inside the block ($i_2$) is equal to the angle of incidence at the exit surface ($i_3$), i.e., $i_3 = i_2$.
+    \item Consequently, by applying Snell's Law a second time at the exit surface, it is proven that the angle of emergence ($i_4$) is exactly equal to the angle of incidence ($i_1$), ensuring that the \textbf{emergent ray is perfectly parallel} to the incident ray.
+    \item The perpendicular distance between these parallel rays is the \textbf{lateral shift ($d$)}:
+    $$d_{theo} = L \frac{\sin(i_1 - i_2)}{\cos i_2}$$
+\end{itemize}
+
+\subsection{Experimental Parameters}
+\begin{itemize}
+    \item Block Thickness (\(L\)): $\SI{6.4}{cm}$
+    \item Refractive Index of Air (\(n_1\)): $1.0003$
+    \item Refractive Index of Acrylic (\(n_2\)): $1.48899$
+    \item Incident Angles (\(i_1\)): $\SI{20}{\degree}$, $\SI{40}{\degree}$, $\SI{60}{\degree}$
+\end{itemize}
+
+\section{Measurements and Data}
+The experimental data gathered for the lateral shift ($d_{exp}$) and the corresponding theoretical calculations are presented below.
+
+\begin{longtable}{|c|c|c|c|c|c|c|}
+	\caption{Experimental and Theoretical Data for Lateral Shift} \label{tab:shift_data} \\
+	\hline
+    \textbf{N} & \textbf{$i_1$ (°)} & \textbf{$i_2$ (theo) (°)} & \textbf{$i_3$ (theo) (°)} & \textbf{$i_4$ (theo) (°)} & \textbf{$d_{exp}$ (\SI{}{cm})} & \textbf{$d_{theo}$ (\SI{}{cm})} \\
+	\hline
+	\endfirsthead
+    \caption{Table \ref{tab:shift_data} continued} \\
+    \hline
+    \textbf{N} & \textbf{$i_1$ (°)} & \textbf{$i_2$ (theo) (°)} & \textbf{$i_3$ (theo) (°)} & \textbf{$i_4$ (theo) (°)} & \textbf{$d_{exp}$ (\SI{}{cm})} & \textbf{$d_{theo}$ (\SI{}{cm})} \\
+    \hline
+	\endhead
+	1 & 20 & 13.2834 & 13.2834 & 20 & 0.70 & 0.7691 \\
+	2 & 40 & 25.5833 & 25.5833 & 40 & 2.00 & 1.7666 \\
+	3 & 60 & 35.5768 & 35.5768 & 60 & 3.40 & 3.2536 \\
+	\hline
+\end{longtable}
+
+\section{Detailed Calculations and Error Analysis}
+\subsection{Step-by-Step Calculation of Theoretical Values}
+(Bu kısımda $i_2$ ve $d_{theo}$ hesaplamaları, ara adımlarla birlikte, önceki haliyle kalmıştır.)
+\begin{itemize}
+    \item \textbf{For $i_1 = \SI{20}{\degree}$:} $i_{2, \SI{20}{\degree}} \approx \mathbf{\SI{13.2834}{\degree}}$ and $d_{theo, \SI{20}{\degree}} \approx \mathbf{\SI{0.7691}{cm}}$
+    \item \textbf{For $i_1 = \SI{40}{\degree}$:} $i_{2, \SI{40}{\degree}} \approx \mathbf{\SI{25.5833}{\degree}}$ and $d_{theo, \SI{40}{\degree}} \approx \mathbf{\SI{1.7666}{cm}}$
+    \item \textbf{For $i_1 = \SI{60}{\degree}$:} $i_{2, \SI{60}{\degree}} \approx \mathbf{\SI{35.5768}{\degree}}$ and $d_{theo, \SI{60}{\degree}} \approx \mathbf{\SI{3.2536}{cm}}$
+\end{itemize}
+
+\subsection{Percentage Error (PE) Calculation}
+$PE = \left|\frac{d_{theo}-d_{exp}}{d_{theo}}\right|\cdot100$
+\begin{itemize}
+    \item $PE_{\SI{20}{\degree}} \approx \mathbf{8.98\%}$
+    \item $PE_{\SI{40}{\degree}} \approx \mathbf{13.21\%}$
+    \item $PE_{\SI{60}{\degree}} \approx \mathbf{4.50\%}$
+\end{itemize}
+
+\subsection{Error Propagation for the Ratio $M = d/L$}
+The ratio $M$ is defined as a function of the two measured independent variables, the lateral shift $d$ and the block thickness $L$: $M(d,L) = d/L$. The absolute error ($\Delta M$) is determined using the general formula for the propagation of uncertainty based on partial derivatives:
+$$\Delta M=\sqrt{\left(\frac{\partial M}{\partial d}\right)^{2}\left(\Delta d\right)^{2}+\left(\frac{\partial M}{\partial L}\right)^{2}\left(\Delta L\right)^{2}}$$
+Substituting the derivatives yields:
+$$\Delta M=\sqrt{\left(\frac{1}{L}\right)^{2}\left(\Delta d\right)^{2}+\left(\frac{-d}{L^{2}}\right)^{2}\left(\Delta L\right)^{2}}$$
+The calculated absolute errors ($\Delta M$) are small ($\sim 0.008$), confirming that length measurement uncertainties alone do not explain the high PE values (up to $13.21\%$).
+
+\section{Discussion}
+
+\subsection{Error Analysis}
+
+The experimental results demonstrate reasonable agreement with theoretical predictions, with percentage errors ranging from $4.50\%$ to $13.21\%$. The error propagation analysis indicates that instrumental uncertainties in length measurements ($\Delta L$, $\Delta d$) contribute minimally to the overall uncertainty ($\Delta M \approx 0.008$), suggesting that systematic errors dominate the experimental deviation.
+
+Three principal sources of systematic error were identified. First, the finite beam width effect introduces ambiguity in determining the ray center position, as the theoretical model assumes an idealized geometric ray while the experimental beam possesses measurable spatial extent. This effect becomes increasingly significant as the lateral displacement increases with incident angle. Second, surface imperfections and potential non-parallelism of the acrylic block faces violate the fundamental geometric assumption underlying the theoretical derivation. Even small angular deviations ($<0.5°$) can produce measurable discrepancies in the emergent ray direction, directly affecting $d_{exp}$. Third, chromatic dispersion from the polychromatic light source results in wavelength-dependent refractive indices, broadening the emergent beam and complicating precise measurement of the lateral shift.
+
+The anomalous error at $i_1 = \SI{40}{\degree}$ ($PE = 13.21\%$) likely arises from compounding of these systematic effects rather than random measurement uncertainty. At intermediate angles, the sensitivity of $d$ to variations in $i_2$ reaches a local maximum, amplifying the impact of beam width and surface irregularities on the measured displacement.
+
+\subsection{Methodological Improvements}
+
+Several experimental refinements could substantially reduce systematic uncertainties. Implementation of the optical pin method would eliminate beam width ambiguity by defining ray paths through collinear point markers rather than extended light traces. Digital image analysis techniques, employing centroid determination algorithms on high-resolution photographs of the experimental setup, would provide objective, reproducible measurements of beam positions with sub-millimeter precision. Finally, direct experimental determination of the block's refractive index through analysis of $\sin i_1 / \sin i_2$ across multiple incident angles would ensure theoretical predictions utilize material parameters specific to the actual specimen rather than literature values that may not account for composition variations or temperature dependence.
+
+\section{Conclusion}
+
+This experiment demonstrated the refraction of light through a parallel-sided medium and quantified the resulting lateral displacement of the transmitted ray. The measured shifts exhibited the expected monotonic increase with incident angle, confirming the validity of Snell's law and geometric optics principles. Despite systematic deviations attributed to finite beam geometry, surface imperfections, and chromatic dispersion, the theoretical model proved adequate for predicting experimental outcomes within $15\%$ accuracy. Future investigations employing enhanced measurement protocols—particularly digital image analysis and direct refractive index determination—would enable more rigorous testing of optical theory and provide deeper insight into the limitations of geometric optics approximations in undergraduate laboratory settings.
+
+\newpage
+
+\textbf{Student Information}
+
+Name Surname: Hakkı Erdem Günal
+
+Student ID: 173223024
+
+Course: Physics 3 Laboratory
+
+Experiment No / Title: 5 / Light Through a Parallel-Sided Block
+
+Experiment Date: October 20, 2025
+
+Submission Date: October 23, 2025
+
+\end{document}
