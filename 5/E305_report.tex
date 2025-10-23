@@ -9,6 +9,7 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{graphicx}
 \usepackage{float}
+\usepackage{booktabs} % Added for better table formatting
 
 \begin{document}
 
@@ -63,26 +64,25 @@ The defining feature of this experiment is the \textbf{parallel nature of the bl
 \section{Measurements and Data}
 The experimental data gathered for the lateral shift ($d_{exp}$) and the corresponding theoretical calculations are presented below.
 
-\begin{longtable}{|c|c|c|c|c|c|c|}
-	\caption{Experimental and Theoretical Data for Lateral Shift} \label{tab:shift_data} \\
-	\hline
+\begin{longtable}{ccccccccc}
+    \caption{Experimental and Theoretical Data for Lateral Shift} \label{tab:shift_data} \\
+    \toprule
     \textbf{N} & \textbf{$i_1$ (\si{\degree})} & \textbf{$i_2$ (theo) (\si{\degree})} & \textbf{$i_3$ (theo) (\si{\degree})} & \textbf{$i_4$ (theo) (\si{\degree})} & \textbf{$d_{exp}$ (\si{cm})} & \textbf{$d_{theo}$ (\si{cm})} \\
-	\hline
-	\endfirsthead
+    \midrule
+    \endfirsthead
     \caption{Table \ref{tab:shift_data} continued} \\
-    \hline
+    \toprule
     \textbf{N} & \textbf{$i_1$ (\si{\degree})} & \textbf{$i_2$ (theo) (\si{\degree})} & \textbf{$i_3$ (theo) (\si{\degree})} & \textbf{$i_4$ (theo) (\si{\degree})} & \textbf{$d_{exp}$ (\si{cm})} & \textbf{$d_{theo}$ (\si{cm})} \\
-    \hline
-	\endhead
-	1 & 20 & 13.2834 & 13.2834 & 20 & 0.70 & 0.7691 \\
-	2 & 40 & 25.5833 & 25.5833 & 40 & 2.00 & 1.7666 \\
-	3 & 60 & 35.5768 & 35.5768 & 60 & 3.40 & 3.2536 \\
-	\hline
+    \midrule
+    \endhead
+    1 & 20 & 13.2834 & 13.2834 & 20 & 0.70 & 0.7691 \\
+    2 & 40 & 25.5833 & 25.5833 & 40 & 2.00 & 1.7666 \\
+    3 & 60 & 35.5768 & 35.5768 & 60 & 3.40 & 3.2536 \\
+    \bottomrule
 \end{longtable}
 
 \section{Detailed Calculations and Error Analysis}
 \subsection{Step-by-Step Calculation of Theoretical Values}
-(Bu kısımda $i_2$ ve $d_{theo}$ hesaplamaları, ara adımlarla birlikte, önceki haliyle kalmıştır.)
 \begin{itemize}
     \item \textbf{For $i_1 = \SI{20}{\degree}$:} $i_{2, \SI{20}{\degree}} \approx \mathbf{\SI{13.2834}{\degree}}$ and $d_{theo, \SI{20}{\degree}} \approx \mathbf{\SI{0.7691}{cm}}$
     \item \textbf{For $i_1 = \SI{40}{\degree}$:} $i_{2, \SI{40}{\degree}} \approx \mathbf{\SI{25.5833}{\degree}}$ and $d_{theo, \SI{40}{\degree}} \approx \mathbf{\SI{1.7666}{cm}}$
@@ -100,8 +100,24 @@ $PE = \left|\frac{d_{theo}-d_{exp}}{d_{theo}}\right|\cdot100$
 \subsection{Error Propagation for the Ratio $M = d/L$}
 The ratio $M$ is defined as a function of the two measured independent variables, the lateral shift $d$ and the block thickness $L$: $M(d,L) = d/L$. The absolute error ($\Delta M$) is determined using the general formula for the propagation of uncertainty based on partial derivatives:
 $$\Delta M=\sqrt{\left(\frac{\partial M}{\partial d}\right)^{2}\left(\Delta d\right)^{2}+\left(\frac{\partial M}{\partial L}\right)^{2}\left(\Delta L\right)^{2}}$$
-Substituting the derivatives yields:
+Substituting the derivatives $\frac{\partial M}{\partial d} = \frac{1}{L}$ and $\frac{\partial M}{\partial L} = -\frac{d}{L^{2}}$ yields:
 $$\Delta M=\sqrt{\left(\frac{1}{L}\right)^{2}\left(\Delta d\right)^{2}+\left(\frac{-d}{L^{2}}\right)^{2}\left(\Delta L\right)^{2}}$$
+The absolute uncertainties for length measurements are $\Delta d = \SI{0.05}{cm}$ and $\Delta L = \SI{0.05}{cm}$, and $L = \SI{6.4}{cm}$.
+
+\subsubsection{Calculated Absolute Errors ($\Delta M$)}
+\begin{itemize}
+    \item \textbf{For $i_1 = \SI{20}{\degree}$ ($d_{exp} = \SI{0.70}{cm}$):}
+    $$\Delta M_{\SI{20}{\degree}} = \sqrt{\left(\frac{1}{6.4}\right)^{2}\left(0.05\right)^{2}+\left(\frac{-0.70}{\left(6.4\right)^{2}}\right)^{2}\left(0.05\right)^{2}}$$
+    $$\Delta M_{\SI{20}{\degree}} \approx \sqrt{(0.000061035 + 0.000000742)} \approx \mathbf{0.00785}$$
+    
+    \item \textbf{For $i_1 = \SI{40}{\degree}$ ($d_{exp} = \SI{2.00}{cm}$):}
+    $$\Delta M_{\SI{40}{\degree}} = \sqrt{\left(\frac{1}{6.4}\right)^{2}\left(0.05\right)^{2}+\left(\frac{-2.00}{\left(6.4\right)^{2}}\right)^{2}\left(0.05\right)^{2}}$$
+    $$\Delta M_{\SI{40}{\degree}} \approx \sqrt{(0.000061035 + 0.000005995)} \approx \mathbf{0.00818}$$
+
+    \item \textbf{For $i_1 = \SI{60}{\degree}$ ($d_{exp} = \SI{3.40}{cm}$):}
+    $$\Delta M_{\SI{60}{\degree}} = \sqrt{\left(\frac{1}{6.4}\right)^{2}\left(0.05\right)^{2}+\left(\frac{-3.40}{\left(6.4\right)^{2}}\right)^{2}\left(0.05\right)^{2}}$$
+    $$\Delta M_{\SI{60}{\degree}} \approx \sqrt{(0.000061035 + 0.000017326)} \approx \mathbf{0.00884}$$
+\end{itemize}
 The calculated absolute errors ($\Delta M$) are small ($\sim 0.008$), confirming that length measurement uncertainties alone do not explain the high PE values (up to $13.21\%$).
 
 \section{Discussion}
@@ -120,7 +136,7 @@ Several experimental refinements could substantially reduce systematic uncertain
 
 \section{Conclusion}
 
-This experiment demonstrated the refraction of light through a parallel-sided medium and quantified the resulting lateral displacement of the transmitted ray. The measured shifts exhibited the expected monotonic increase with incident angle, confirming the validity of Snell's law and geometric optics principles. Despite systematic deviations attributed to finite beam geometry, surface imperfections, and chromatic dispersion, the theoretical model proved adequate for predicting experimental outcomes within $15\%$ accuracy. Future investigations employing enhanced measurement protocols—particularly digital image analysis and direct refractive index determination—would enable more rigorous testing of optical theory and provide deeper insight into the limitations of geometric optics approximations in undergraduate laboratory settings.
+This experiment demonstrated the refraction of light through a parallel-sided medium and quantified the resulting lateral displacement of the transmitted ray. The measured shifts exhibited the expected monotonic increase with incident angle, confirming the validity of Snell's law and geometric optics principles. Despite systematic deviations attributed to finite beam geometry, surface imperfections, and chromatic dispersion, the theoretical model proved adequate for predicting experimental outcomes within $15\%$ accuracy. Future investigations employing enhanced measurement protocols particularly digital image analysis and direct refractive index determination would enable more rigorous testing of optical theory and provide deeper insight into the limitations of geometric optics approximations in undergraduate laboratory settings.
 
 \newpage
 
